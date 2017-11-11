@@ -10,12 +10,16 @@ else:
     
     n='n'
     d='.'
+    nf=0
+    
     
     for i in range(value):
         
         if i<1 or i>=value-1:
-            print 'n'+d*(i-1)+d*(value-i-2)+'n'
+            nf=0
         else:
-            print 'n'+d*(i-1)+n+d*(value-i-2)+'n'
+            nf=1
+        
+        print 'n'+d*(i-1)+n*nf+d*(value-i-2)+'n'
 
 print "\n"
